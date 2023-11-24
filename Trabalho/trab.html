@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<body>
+    <h1>Cadastro de Animais</h1>
+    <form action="adicionar.php" method="post">
+        <label for="nome">Nome do animal:</label>
+        <input type="text" id="name" name="nome" required><br>
+        <label for="especie">Espécie:</label>
+        <input type="text" id="especie" name="especie" required><br>
+        <label for="raca">Raça:</label>
+        <input type="text" id="raca" name="raca" required><br>
+        <input type="submit" id="botao" value="Enviar">
+    </form>
+    <a href="listar.php">Listar Animais</a>
+
+    <script>
+        function validarFormulario() {
+            var nome = document.getElementById('nome').value;
+            var especie = document.getElementById('especie').value;
+            var raca = document.getElementById('raca').value;
+
+            if (nome === '' || especie === '' || raca === '') {
+                alert('Por favor, preencha todos os campos.');
+                return false; 
+            }
+              return true; 
+        }
+    </script>
+</body>
+</html>

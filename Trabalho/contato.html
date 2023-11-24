@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <html>
+<head>
+    <title>Cadastro</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+    <header>
+        <h1>Cadastro</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="contato.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        
+        <body>
+            <h2><center>Cadastro de Animais</center></h2>
+            <form action="adicionar.php" method="post">
+                <label for="nome">Nome do animal:</label>
+                <input type="text" name="nome" required><br>
+                <label for="especie">Especie:</label>
+                <input type="text" name="especie" required><br>
+                <label for="raca">Raça:</label>
+                <input type="text" name="raca" required><br>
+                <input type="submit" id="botao" value="Cadastrar">
+            </form>
+            
+        
+            <script>
+                function validarFormulario() {
+                    var nome = document.getElementById('nome').value;
+                    var especie = document.getElementById('especie').value;
+                    var raca = document.getElementById('raca').value;
+        
+                    if (nome === '' || especie === '' || raca === '') {
+                        alert('Por favor, preencha todos os campos.');
+                        return false; 
+                    }
+                      return true; 
+                }
+            </script>
+        </body>
+    </section>
+</html>
+</html>
